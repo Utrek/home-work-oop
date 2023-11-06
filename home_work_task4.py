@@ -26,7 +26,7 @@ class Student:
         return (count/count2)
     
     def __str__(self):
-        return f"Имя: {self.name}\nФамилия: {self.surname}\nСредняя оценка за лекции: {self.average_rating()}\nКурсы в процессе изучения: {','.join(self.courses_in_progress)}\nЗавершенные курсы: {','.join(self.finished_courses)}"
+        return f"Имя: {self.name}\nФамилия: {self.surname}\nСредняя оценка за домашние задания: {self.average_rating()}\nКурсы в процессе изучения: {','.join(self.courses_in_progress)}\nЗавершенные курсы: {','.join(self.finished_courses)}"
 
         
 class Mentor:
@@ -123,3 +123,6 @@ print (reviewer2)
 print (lecturer1)
 print (lecturer2)
 comparison_lecurer(lecturer1,lecturer2)
+student_list = [student1,student2]
+print (student_list)
+def average_homework_score(student_list,Course)
