@@ -80,37 +80,3 @@ def comparison_students(student1,student2):
         print (f'Оценки студента {student1.name} {student1.surname} ниже чем оценки студента {student2.name} {student2.surname}')
     else:print ("У этих студентов одинаковая успеваемость")
 
-    
-horn = Reviewer("Jon","Bow")
-
-pop = Lecturer("Jim", "Bim")
-pok = Lecturer("Jon","Snow")
-pol = Student ("Kin","Cen","Men")
-pot = Student ("Миша","Мухин","Fly")
-pol.courses_in_progress += ['Python',"Git"]
-pol.finished_courses += ["Введение в программирование"] 
-pot.courses_in_progress += ['Python',"Git"]
-pot.finished_courses += ["Введение в программирование"] 
-cool_mentor = Reviewer('Some', 'Buddy')
-cool_mentor.courses_attached += ['Python']
-cool_mentor.rate_hw(pot, 'Python', 8)
-cool_mentor.rate_hw(pot, 'Python', 7)
-cool_mentor.rate_hw(pot, 'Python', 6)
-cool_mentor.rate_hw(pol, 'Python', 10)
-cool_mentor.rate_hw(pol, 'Python', 7)
-cool_mentor.rate_hw(pol, 'Python', 3)
-pop.courses_attached += ['Python']
-pok.courses_attached += ["Python"]
-pol.rate_hw(pop, 'Python', 8)
-pol.rate_hw(pop, 'Python', 7)
-pol.rate_hw(pop, 'Python', 3)
-pol.rate_hw(pok, 'Python', 10)
-pol.rate_hw(pok, 'Python', 7)
-pol.rate_hw(pok, 'Python', 5)
-comparison_lecurer(pop,pok)
-comparison_students(pol,pot)
-print(horn)
-print(pop)
-print(pok)
-print(pol)
-print(pot)
