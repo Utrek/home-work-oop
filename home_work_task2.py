@@ -8,7 +8,7 @@ class Student:
         self.grades = {}
 
     def rate_hw(self, lecturer, course, grade):
-        if isinstance(lecturer, Lecturer) and course in self.courses_attached and course in self.courses_in_progress:
+        if isinstance(lecturer, Lecturer) and course in lecturer.courses_attached and course in self.courses_in_progress:
             if course in lecturer.grades:
                 lecturer.grades[course] += [grade]
             else:
