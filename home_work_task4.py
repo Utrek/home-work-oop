@@ -83,6 +83,25 @@ def comparison_students(student1,student2):
     elif student1.average_rating() < student2.average_rating():
         print (f'Оценки студента {student1.name} {student1.surname} ниже чем оценки студента {student2.name} {student2.surname}')
     else:print ("У этих студентов одинаковая успеваемость")
+def average_homework_score(student_list,course):
+    count1 = 0
+    count3 = 0
+    for student in student_list:
+        if course in student.grades:
+            for grade in student.grades[course]:
+                count1 += grade
+                count3 += 1
+    print(f"Средний балл за домашнее задание на курсе {course} = {count1/count3}") 
+
+def average_lectures_score(lectures_list,course):
+    count1 = 0
+    count3 = 0
+    for lecturer in lectures_list:
+        if course in lecturer.grades:
+            for grade in lecturer.grades[course]:
+                count1 += grade
+                count3 += 1
+    print(f"Средняя оценка за лекции на курсе {course} = {count1/count3}")         
 
 reviewer1 = Reviewer("Алёна","Апина")
 reviewer2 = Reviewer("Олег","Газманов")
@@ -115,14 +134,20 @@ student1.rate_hw(lecturer2, 'Git', 6)
 student2.rate_hw(lecturer2, 'Git', 7)
 student1.rate_hw(lecturer2, 'Git', 10)
 student2.rate_hw(lecturer2, 'Git', 10)
+
+student_list = [student1,student2]
+lectures_list = [lecturer1,lecturer2]
+
+
 print (student1)
 print (student2)
 comparison_students(student1,student2)
-print (reviewer1)
-print (reviewer2)
+average_homework_score(student_list,"Python")
+average_homework_score(student_list,"Git")
 print (lecturer1)
 print (lecturer2)
-comparison_lecurer(lecturer1,lecturer2)
-student_list = [student1,student2]
-print (student_list)
-def average_homework_score(student_list,Course)
+average_lectures_score(lectures_list,"Git")
+average_lectures_score(lectures_list,"Python")
+comparison_lecurer(lecturer1,lecturer2)   
+print (reviewer1)
+print (reviewer2)
